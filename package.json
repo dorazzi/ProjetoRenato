@@ -1,14 +1,14 @@
 {
   "name": "nodejs",
   "version": "1.0.0",
-  "description": "",
+  "description": "TrabalhoFinal",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "serve": "serve .",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Ana Dorazzi",
   "license": "ISC",
   "dependencies": {
     "@types/node": "^18.0.6",
@@ -20,6 +20,15 @@
     "nodemon": "^2.0.20",
     "pg": "^8.8.0",
     "sequelize": "^6.23.0",
-    "sequelize-cli": "^6.4.1"
-  }
+    "sequelize-cli": "^6.4.1",
+    "serve": "^14.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dorazzi/ProjetoRenato.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dorazzi/ProjetoRenato/issues"
+  },
+  "homepage": "https://github.com/dorazzi/ProjetoRenato#readme"
 }
