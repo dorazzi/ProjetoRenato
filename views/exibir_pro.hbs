@@ -1,0 +1,46 @@
+ <br /> 
+<div class="container">
+  <h2>Produtos Cadastrados</h2>
+  {{#if table}}
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Nome </th>
+      <th scope="col">Descrição</th>
+      <th scope="col">Preço</th>
+      <th scope="col">Imagem</th>
+      <th scope="col">Opções</th>
+    </tr>
+  </thead>
+   {{#each produtos}}
+  <tbody>
+    <tr>
+     <th scope="row">{{id}}</th>
+      <td>{{nome}}</td>
+      <td>{{descricao}}</td>
+      <td>R${{preco}}</td>
+      <td><img style="max-width: 10%;" src="{{codigo}}" class="card-img-top" alt="..."></td>
+      <td>
+        <form action="/editar_pro" method="post">
+          <input type="hidden" name="id" value="{{id}}"></input>
+          <button type="submit" class="btn btn-outline-success">Editar</button>
+        </form>
+        <form action="/excluir_pro" method="post">
+          <input type="hidden" name="id" value="{{id}}"></input>
+          <button type="submit" class="btn btn-outline-danger">Excluir</button>
+        </form>
+      </td>
+      {{/each}}
+    </tr>
+    
+  </tbody>
+</table>
+  {{else}}
+<div class="card mt-4">
+    <div class="card-body">
+    Nenhum produto cadastrado no sistema.
+  </div>
+</div>
+  {{/if}}
+</div>
